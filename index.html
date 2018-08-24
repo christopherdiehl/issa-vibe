@@ -10,7 +10,7 @@
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="assets/css/mdb.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-material-design.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css" />
     <title>Issa Vibe</title>
@@ -20,39 +20,47 @@
     <h1>HELLO WORLD</h1>
     <div class="main">
         <div class="row">
-            <div class="col-6 col-md-4"></div>
-            <div class="col-6 col-md-4">
-                <div class="card m-5" style="width: 22rem;">
-
-                    <!--Card image-->
-                    <div class="view overlay hm-white-slight">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-                        <a href="#">
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-
+            <div class="col-6 col-md-4 col-lg-4"></div>
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="card border-primary mb-3">
+                    <!--Title-->
+                    <h3 class="card-header text-white bg-secondary  text-center py-4">Issa Vibe</h3>
                     <!--Card content-->
                     <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Card title</h4>
-                        <!--Text-->
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Button</a>
+                        <form class="text-center border border-light p-5">
+                            <!--Blue select-->
+                            <div class="form-group">
+                                <label for="exampleSelect1" class="bmd-label-floating">Choose a genre</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option></option>
+                                    <option>Punk</option>
+                                    <option>Jazz</option>
+                                    <option>Hip Hop</option>
+                                    <option>Pop</option>
+                                    <option>Rock</option>
+                                </select>
+
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <button type="button" class="btn  btn-primary btn-lg col-12">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!--/Blue select-->
                     </div>
-
                 </div>
+                <div class="col-6 col-md-4 col-lg-4"></div>
             </div>
-            <div class="col-6 col-md-4"></div>
         </div>
-    </div>
 
-    <footer>
-        <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <!-- stats.js lib -->
-        <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-        <script src="assets/js/main.js "></script>
+        <footer>
+            <script src="assets/js/bootstrap-material-design.min"></script>
+            <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+            <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+            <!-- stats.js lib -->
+            <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+            <script src="assets/js/main.js "></script>
 </body>
 
 
