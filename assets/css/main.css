@@ -3,6 +3,9 @@ body {
   margin: 0;
   font: normal 75% Arial, Helvetica, sans-serif;
 }
+.ht-70 {
+  height: 70% !important;
+}
 .main {
   position: absolute;
   z-index: 25;
