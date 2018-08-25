@@ -22,11 +22,8 @@ func handleMusic(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 	} else {
-		r.ParseForm()
-		fmt.Println(r.Form)
-		for key, value := range r.Form {
-			fmt.Printf("key: %s, values: %s", key, value)
-		}
+		genre := r.FormValue("genre")
+		fmt.Println(genre)
 		fmt.Fprintln(w, "Music posted successfully")
 	}
 }

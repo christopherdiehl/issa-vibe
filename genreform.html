@@ -1,12 +1,12 @@
 {{define "body"}}
-<form class="text-center border border-light p-5" method="post" action="/">
+<form class="text-center border border-light p-5" method="POST" action="/music">
     <div class="form-group">
         <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
     </div>
     <div class="form-group">
         <label for="genre" class="bmd-label-floating">Choose a genre</label>
-        <select class="form-control" id="genre">
+        <select class="form-control" id="genre" name="genre">
             <option></option>
             <option>Punk</option>
             <option>Jazz</option>
