@@ -8,8 +8,8 @@ import (
 )
 
 func handleRoot(w http.ResponseWriter, r *http.Request) {
-	index := template.Must(template.ParseFiles("layout.html", "index.html"))
-	err := index.ExecuteTemplate(w, "index.html", nil)
+	index := template.Must(template.ParseFiles("layout.html", "genreform.html"))
+	err := index.ExecuteTemplate(w, "base", nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
