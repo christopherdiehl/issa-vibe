@@ -9,15 +9,15 @@ import (
 )
 
 var tmpl = make(map[string]*template.Template)
-var playlists = map[string]string{
-	"Punk":    "37i9dQZF1DXa9wYJr1oMFq",
-	"Jazz":    "37i9dQZF1DWVqfgj8NZEp1",
-	"Blues":   "37i9dQZF1DXaiAJKcabR16",
-	"Pop":     "37i9dQZF1DXcBWIGoYBM5M",
-	"Rock":    "37i9dQZF1DXcF6B6QPhFDv",
-	"Hip Hop": "37i9dQZF1DX0XUsuxWHRQd",
-	"Folk":    "37i9dQZF1DWYV7OOaGhoH0",
-	"Indie":   "37i9dQZF1DX2Nc3B70tvx0",
+var playlists = map[string][]string{
+	"Punk":    []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Jazz":    []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Blues":   []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Pop":     []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Rock":    []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Hip Hop": []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Folk":    []string{"2D7tauy2bntJnJQ2C4rO4x"},
+	"Indie":   []string{"2D7tauy2bntJnJQ2C4rO4x"},
 }
 
 func parseTemplates() {
@@ -34,8 +34,10 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 		genre := r.FormValue("genre")
 		var url strings.Builder
 		id := playlists[genre]
+		// for track use https://open.spotify.com/embed/track/
 		url.WriteString("https://open.spotify.com/embed/track/")
 		url.WriteString(id)
+		fmt.Println(url.String())
 		err := tmpl["postIndex"].ExecuteTemplate(w, "base", &struct{ URL string }{url.String()})
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
