@@ -32,14 +32,11 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 		}
 	} else {
 		genre := r.FormValue("genre")
-		fmt.Println(genre)
 		var url strings.Builder
 		id := playlists[genre]
 		url.WriteString("https://open.spotify.com/embed/track/")
 		url.WriteString(id)
-		url.WriteString("FOO")
-		fmt.Println(url.String())
-		err := tmpl["postIndex"].ExecuteTemplate(w, "base", nil)
+		err := tmpl["postIndex"].ExecuteTemplate(w, "base", &struct{ URL string }{url.String()})
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
