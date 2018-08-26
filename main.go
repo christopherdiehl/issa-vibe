@@ -9,7 +9,7 @@ import (
 )
 
 var tmpl = make(map[string]*template.Template)
-var playlists = map[string][]string{
+var genreTrackMap = map[string][]string{
 	"Punk":    []string{"2D7tauy2bntJnJQ2C4rO4x"},
 	"Jazz":    []string{"2D7tauy2bntJnJQ2C4rO4x"},
 	"Blues":   []string{"2D7tauy2bntJnJQ2C4rO4x"},
@@ -33,7 +33,7 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 	} else {
 		genre := r.FormValue("genre")
 		var url strings.Builder
-		id := playlists[genre]
+		id := genreTrackMap[genre]
 		// for track use https://open.spotify.com/embed/track/
 		url.WriteString("https://open.spotify.com/embed/track/")
 		url.WriteString(id)
