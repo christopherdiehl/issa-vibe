@@ -22,8 +22,8 @@ var genreTrackMap = map[string][]string{
 }
 
 func parseTemplates() {
-	tmpl["getIndex"] = template.Must(template.ParseFiles("layout.html", "genreform.html"))
-	tmpl["postIndex"] = template.Must(template.ParseFiles("layout.html", "songPlayer.html"))
+	tmpl["getIndex"] = template.Must(template.ParseFiles("assets/templates/layout.html", "assets/templates/genreform.html"))
+	tmpl["postIndex"] = template.Must(template.ParseFiles("assets/templates/layout.html", "assets/templates/songPlayer.html"))
 }
 func handleRoot(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
