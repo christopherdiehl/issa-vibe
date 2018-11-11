@@ -3,7 +3,7 @@
  A web application built in go that returns a random song from the selected genre
 
 ## Inspiration
-I really enjoyed music and spend most of my days writing SPA (React) or REST APIs (Express,Go). I really wanted to experiment with a barebones webserver using the (mostly) standard library. I also wanted to try a deployment strategy I haven't used before, which is CodeBuild -> Cloudformation. 
+I really enjoyed music and spend most of my days writing SPA (React) or REST APIs (Express,Go). I really wanted to experiment with a barebones webserver using the (mostly) standard library. 
 
 ## Features
 - template.yml -> cloudformation template
